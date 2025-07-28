@@ -9,16 +9,29 @@ public class Qes1_3 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("半角英数字のみで名前を入力してください");
-		String userName = scanner.nextLine();
-		if (userName.length() > 10) {
-			System.out.println("名前を10字以内にしてください");
-		} else if (userName.length() == 0 || userName == null) {
-			System.out.println("名前を入力してください"); 
-		} else {
-			System.out.println("ユーザー名「" + userName + "」を登録しました");
-		}
 
+		String userName = "";
+		boolean isValidName = false;//入力が正常まで判定するフラグ
+
+		while (!isValidName) {
+			//ユーザー名を登録
+			System.out.println("半角英数字のみで名前を入力してください");
+			userName = scanner.nextLine();
+
+			if (userName.length() == 0 || userName == null) {
+				System.out.println("名前を入力してください");
+			} else if (userName.length() > 10) {
+				System.out.println("名前を10字以内にしてください");
+			} else {
+				System.out.println("ユーザー名「" + userName + "」を登録しました");
+				isValidName = true;
+			}
+		}
+		jankenLogic(userName);
+		scanner.close();
+	}
+
+	public static void jankenLogic(String userName) {
 		int[] hand = { 0, 1, 2 };//0=グー 1=チョキ 2=パー
 
 		Random rand = new Random();
@@ -63,7 +76,5 @@ public class Qes1_3 {
 			}
 		}
 		System.out.println("勝つまでにかかった合計回数は" + count + "回です");
-		scanner.close();
 	}
-
 }
