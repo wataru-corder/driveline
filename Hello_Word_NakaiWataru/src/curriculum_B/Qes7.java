@@ -21,7 +21,6 @@ public class Qes7 {
 				scores[i][j] = Integer.parseInt(scanner.nextLine());
 			}
 		}
-		
 		/*
 		 * n人目の平均点
 		 */
@@ -44,7 +43,15 @@ public class Qes7 {
 			double average = sum / input;
 			System.out.printf("%sの平均は%.2f点です。\n", subject[j], average);
 		}
-
+		//全体の科目平均
+		double totalSum = 0;
+		for (int i = 0; i < input; i++) {
+			for (int j = 0; j < subject.length; j++) {
+				totalSum += scores[i][j];
+			}
+		}
+		double totalAverage = totalSum / (input * subject.length);
+		System.out.printf("全体の平均点は %.2f 点です。\n", totalAverage);
 	}
 
 }
