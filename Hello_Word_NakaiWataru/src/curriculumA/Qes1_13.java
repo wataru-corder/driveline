@@ -113,9 +113,10 @@ public class Qes1_13 {
 		double heightInt = Double.parseDouble(heightString);
 		double weightInt = Double.parseDouble(weightString);
 		System.out.println("身長：" + heightInt + "体重：" + weightInt);
-		
+
 		System.out.println("-------------13の解答-------------");
 		System.out.println(age >= 25 || heightInt > 160);
+
 	}
 
 }
