@@ -4,45 +4,47 @@ public class Qes1_13 {
 
 	public static void main(String[] args) {
 
-		byte a;
-		short b;
-		int c;
-		long d;
-		float e;
-		double f;
-		char g;
-		String h;
-		boolean i;
+		byte byteValue;
+		short shortValue;
+		int intValue;
+		long longValue;
+		float floatValue;
+		double doubleValue;
+		char charValue;
+		String stringValue;
+		boolean booleanValue;
 
-		a = 0;
-		b = 0;
-		c = 0;
-		d = 0;
-		e = 0;
-		f = 0;
-		g = 'a';
-		h = "";
-		i = false;
+		byteValue = 0;
+		shortValue = 0;
+		intValue = 0;
+		longValue = 0;
+		floatValue = 0.0f;
+		doubleValue = 0.0;//
+		charValue = ' ';//
+		stringValue = "";//
+		booleanValue = false;
+		
+		
 
-		a = 10;
-		b = 100;
-		c = 1000;
-		d = 10000L;
-		e = 9.5f;
-		f = 10.5;
-		g = 'a';
-		h = "ハロー";
-		i = true;
+		byteValue = 10;
+		shortValue = 100;
+		intValue = 1000;
+		longValue = 10000L;
+		floatValue = 9.5f;
+		doubleValue = 10.5;
+		charValue = 'a';
+		stringValue = "ハロー";
+		booleanValue = true;
 
 		System.out.println("-------------4の解答-------------");
 
-		System.out.println(a + b + c + d);//11110
-		System.out.println(a + (int) f);//20
-		System.out.println(g + " " + h + " " + i);//a ハロー true
-		System.out.println((int) (a + b + c + d + e + f));//11130
-		System.out.println(a * b * c * d);//10000000000
-		System.out.println(f / b);//0.105
-		System.out.println(a - b);//-90
+		System.out.println(byteValue + shortValue + intValue + longValue); // 11110
+		System.out.println(byteValue + (int) doubleValue); // 20
+		System.out.println(charValue + " " + stringValue + " " + booleanValue); // a ハロー true
+		System.out.println((int) (byteValue + shortValue + intValue + longValue + floatValue + doubleValue)); // 11130
+		System.out.println(byteValue * shortValue * intValue * longValue); // 10000000000
+		System.out.println(doubleValue / shortValue); // 0.105
+		System.out.println(byteValue - shortValue); // -90
 
 		System.out.println("-------------5の解答-------------");
 		int num = 20;
@@ -88,11 +90,15 @@ public class Qes1_13 {
 		System.out.printf("BMIは%.1fです%n", bmi);
 
 		System.out.println("-------------9の解答-------------");
-
+		
+		age = age + age;
+		height = height + height;
+		weight = weight + weight;
+		
 		System.out.println("初めまして" + name + "です");
-		System.out.println("年齢は" + (age + age) + "歳です");
-		System.out.println("身長は" + (height + height) + "cmです");
-		System.out.println("体重は" + (weight + weight) + "kgです");
+		System.out.println("年齢は" + age + "歳です");
+		System.out.println("身長は" + height + "cmです");
+		System.out.println("体重は" + weight + "kgです");
 		System.out.println("好きな食べ物は" + favoriteFood + "です");
 
 		heightMeter = height / 100;
