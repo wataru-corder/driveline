@@ -22,6 +22,8 @@ public class Qes1_3 {
 				System.out.println("名前を入力してください");
 			} else if (userName.length() > 10) {
 				System.out.println("名前を10字以内にしてください");
+			} else if (!userName.matches("^[a-zA-Z0-9]+$")) {
+				System.out.println("半角英数字のみ使用できます（例: Taro123）");
 			} else {
 				System.out.println("ユーザー名「" + userName + "」を登録しました");
 				isValidName = true;
