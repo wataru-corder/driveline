@@ -17,15 +17,14 @@ public class Qes1_13 {
 		byteValue = 0;
 		shortValue = 0;
 		intValue = 0;
-		longValue = 0;
+		longValue = 0L;
 		floatValue = 0.0f;
-		doubleValue = 0.0;//
-		charValue = ' ';//
-		stringValue = "";//
+		doubleValue = 0.0;
+		charValue = '\u0000';
+		stringValue = null;
 		booleanValue = false;
 		
 		
-
 		byteValue = 10;
 		shortValue = 100;
 		intValue = 1000;
