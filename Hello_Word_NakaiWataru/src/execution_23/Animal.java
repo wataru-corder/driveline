@@ -1,4 +1,4 @@
-package process_23;
+package execution_23;
 
 public class Animal {
 

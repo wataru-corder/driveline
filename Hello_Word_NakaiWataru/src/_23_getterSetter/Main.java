@@ -1,4 +1,6 @@
-package execution_23;
+package _23_getterSetter;
+
+import execution_23.Animal;
 
 public class Main {
 
