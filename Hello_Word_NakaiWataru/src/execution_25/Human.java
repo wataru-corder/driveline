@@ -2,11 +2,13 @@ package execution_25;
 
 public class Human {
 	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 }
-//こんにちは 「 名前 」 さん
-//ステータス
-//HP：849
-//MP：862
-//攻撃力：375
-//素早さ：937
-//防御力：24

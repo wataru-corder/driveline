@@ -10,6 +10,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 		System.out.print("名前を入力してください：");
+
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.nextLine();
 		
 		Random rand = new Random();
 		int hp = rand.nextInt(1000) + 1;
@@ -20,16 +23,14 @@ public class Main {
 		
 		Hero h = new Hero();
 		
+		h.setName(name);
 		h.setHp(hp);
 		h.setMp(mp);
-		h.setAttack(hp);
-		h.setSpeed(hp);
-		h.setDefense(hp);
-
-		Scanner scanner = new Scanner(System.in);
-		String name = scanner.nextLine();
+		h.setAttack(attack);
+		h.setSpeed(speed);
+		h.setDefense(defence);
 		
-		System.out.println("こんにちは 「" + name  +  "」さん");
+		System.out.println("こんにちは 「 " + h.getName()  +  " 」さん");
 		System.out.println("ステータス");
 		System.out.println("HP：" + h.getHp());
 		System.out.println("MP：" + h.getMp());
