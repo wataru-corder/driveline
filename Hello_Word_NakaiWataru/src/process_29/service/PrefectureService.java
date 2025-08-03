@@ -57,11 +57,12 @@ public class PrefectureService {
 		switch (order) {
 		case "昇順":
 			Collections.sort(nums);
-
 			break;
 		case "降順":
 			Collections.sort(nums, Collections.reverseOrder());
 			break;
+		default:
+			System.out.println("指定が不正です: " + order);
 		}
 	}
 
