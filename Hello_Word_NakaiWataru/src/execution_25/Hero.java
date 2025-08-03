@@ -7,8 +7,7 @@ public class Hero extends Human {
 	private int speed;
 	private int defense;
 
-	public Hero() {
-	}
+	public Hero() {}
 
 	public Hero(int hp, int mp, int attack, int speed, int defense) {
 		this.hp = hp;
