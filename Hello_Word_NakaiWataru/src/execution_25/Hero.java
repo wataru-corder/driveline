@@ -18,15 +18,6 @@ public class Hero extends Human {
 		this.defense = defense;
 	}
 
-	@Override
-	public String getName() {
-		return super.getName();
-	}
-	@Override
-	public void setName(String name) {
-		super.setName(name);
-	}
-
 	public int getHp() {
 		return hp;
 	}
