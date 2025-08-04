@@ -23,7 +23,7 @@ public class PrefectureService {
 			new Prefecture("群馬県", "前橋市", 6362),
 			new Prefecture("埼玉県", "さいたま市", 3798));
 
-	public static void run() {
+	public void run() {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("番号をカンマ区切りで入力してください（例: 8,5,9）：");
@@ -39,7 +39,7 @@ public class PrefectureService {
 	}
 
 	//入力された数字をInteger型に変換
-	private static List<Integer> parseInputToInteger(String input) {
+	private  List<Integer> parseInputToInteger(String input) {
 		List<Integer> result = new ArrayList<>();
 		for (String val : input.split(",")) {
 			try {
@@ -52,7 +52,7 @@ public class PrefectureService {
 	}
 
 	//入力された数字の配列を昇順または降順で並び替える
-	private static void sortNumbers(List<Integer> nums, String order) {
+	private  void sortNumbers(List<Integer> nums, String order) {
 
 		switch (order) {
 		case "昇順":
@@ -67,7 +67,7 @@ public class PrefectureService {
 	}
 
 	//都道府県リストを昇順または降順で並び替えて取り出す
-	public static List<Prefecture> sortPrefecture(List<Integer> indices, List<Prefecture> prefecture) {
+	private  List<Prefecture> sortPrefecture(List<Integer> indices, List<Prefecture> prefecture) {
 		List<Prefecture> sorted = new ArrayList<>();
 		for (int index : indices) {
 			if (index >= 0 && index < prefecture.size()) {
@@ -80,7 +80,7 @@ public class PrefectureService {
 	}
 
 	//配列を出力
-	private static void printPrefectures(List<Prefecture> prefectures) {
+	private  void printPrefectures(List<Prefecture> prefectures) {
 		for (Prefecture p : prefectures) {
 			System.out.println(p);
 
